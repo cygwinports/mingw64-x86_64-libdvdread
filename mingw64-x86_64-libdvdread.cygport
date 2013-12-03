@@ -1,0 +1,21 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libdvdread"
+VERSION=4.2.0
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="DVD Video reading library for Win64 toolchain"
+DESCRIPTION="libdvdread provides a simple foundation for reading DVD-Video
+images. It offers DVD applications a simple abstraction for reading the
+files on a DVD image, parsing the information (IFO) files, and parsing the
+navigation (NAV) packets."
+HOMEPAGE="http://dvdnav.mplayerhq.hu/"
+SRC_URI="http://dvdnav.mplayerhq.hu/releases/libdvdread-${VERSION}.tar.bz2"
+SRC_DIR="libdvdread-${VERSION}"
+PATCH_URI="
+	4.1.3-libtool22.patch
+	4.2.0-mingw.patch
+"
+
+DIFF_EXCLUDES="Makefile"

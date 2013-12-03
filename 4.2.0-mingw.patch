@@ -1,0 +1,11 @@
+--- origsrc/libdvdread-4.2.0/src/dvd_input.c	2009-06-08 17:02:37.000000000 -0500
++++ src/libdvdread-4.2.0/src/dvd_input.c	2013-11-27 15:15:05.323732400 -0600
+@@ -286,7 +286,7 @@ int dvdinput_setup(void)
+ #ifdef __APPLE__
+   #define CSS_LIB "libdvdcss.2.dylib"
+ #elif defined(WIN32)
+-  #define CSS_LIB "libdvdcss.dll"
++  #define CSS_LIB "libdvdcss-2.dll"
+ #elif defined(__OS2__)
+   #define CSS_LIB "dvdcss.dll"
+ #else
